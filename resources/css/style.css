@@ -80,13 +80,32 @@ header .icon {
   padding-left: .75rem;
 }
 
-header .mobile {
+header .mobile,
+header .button {
   display: none;
 }
 
+/*Tablet*/
+@media only screen and (max-width: 890px) {
+  header .button {
+    display: block;
+    padding: .1875rem .5rem;
+    background-color: #9dc20b;
+    line-height: 1.6;
+    color: white;
+  }
+}
+
+
+/*Mobile*/
 @media only screen and (max-width: 760px) {
-  header .desktop {
+  header .desktop{
     display: none;
+  }
+
+  header {
+    height:48px;
+    width: 100%;
   }
 
   header .mobile {
@@ -95,18 +114,18 @@ header .mobile {
   }
 
   header .content {
-    padding: .5rem 0;
+    padding: 0;
   }
 
   header .mobile ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
+    
   }
 
   header .mobile li {
-    padding: 0;
+    padding: .1875rem .5rem;
   }
 
   header .mobile .button {
@@ -172,7 +191,9 @@ header .mobile {
   padding: 1.25rem 7.25rem;
 }
 
-@media only screen and (max-width: 760px) {
+/*Tablet*/
+
+@media only screen and (max-width: 890px) {
   #sign-up-section {
     align-items: center;
     justify-content: center;
@@ -204,9 +225,24 @@ header .mobile {
   }
 }
 
-@media only screen and (max-width: 450px) {
+/*mobile*/
+
+@media only screen and (max-width: 760px) {
   #sign-up-section {
     height: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #sign-up-cta {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  #sign-up-cta .content {
+    width: 100%;
   }
 
   #sign-up-cta h1 {
@@ -265,6 +301,8 @@ header .mobile {
   color: #4a4a4a;
 }
 
+/*tablet*/
+
 @media only screen and (max-width: 890px) {
   .feature h2 {
     font-size: 1.125rem;
@@ -278,6 +316,8 @@ header .mobile {
   }
 }
 
+/*mobile*/
+
 @media only screen and (max-width: 760px) {
   #features-section {
     flex-flow: column;
@@ -286,7 +326,7 @@ header .mobile {
 
   .feature {
     margin: 0;
-    padding: 1.25rem 1rem 0 1rem;
+    padding: 1rem; 
   }
 }
 
@@ -322,6 +362,7 @@ header .mobile {
   padding: 0 1%;
 }
 
+/*mobile*/
 
 @media only screen and (max-width: 760px) {
   #filters-section {
@@ -377,23 +418,50 @@ header .mobile {
   height: 1.875rem;
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 890px) {
+
   #quotes-section content {
     padding: 1.875rem .625rem;
   }
 
-  #quotes-section quote {
+  #quotes-section .quote {
+    float: left;
+    margin-left: 20px;
     font-size: 1.5rem;
     line-height: 1.4;
+    display: block;
+    text-align: left;
+    width: 75%;
   }
 
-  #quotes-section quote-citation {
+  #quotes-section .quote-citation {
     display: block;
     padding-top: 1rem;
-    margin: auto;
+    margin-right: 10px;
+    width:15%;
   }
 }
 
+@media only screen and (max-width: 760px) {
+  #quotes-section .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  #quotes-section .quote {
+    text-align: center;
+    margin: 0;
+    padding: 0 10px;
+    width: 90%;
+  }
+
+  #quotes-section .quote-citation {
+    margin-top: 20px;
+    width: 35%;
+  }
+}
 /* Footer */
 
 footer {
@@ -418,7 +486,9 @@ footer .copyright {
   flex-grow: 1;
 }
 
-@media only screen and (max-width: 760px) {
+/*mobile*/
+
+@media only screen and (max-width: 890px) {
   footer .content {
     font-size: .625rem;
   }
